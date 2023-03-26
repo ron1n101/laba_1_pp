@@ -10,7 +10,7 @@ int main()
     int n;
     cin >> n;
     int arr[n];
-    srand (time(NULL));
+    srand (time(NULL));                                 // делаем чтобы рандром постоянно обновлялся
 
     for (int i = 0; i < n; i++)
     {
@@ -20,21 +20,21 @@ int main()
     cout << "Unsorted array: ";
     for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " ";
+        cout << arr[i] << " ";                          // выводим несортированный массив
     }
 
     cout << endl;
 
-    int min_elem = arr[0];
+    int min_elem = arr[0];                              // ищем минимальный элемент в массиве
     for (int i = 1; i < n; i++)
     {
-        if (arr[i] < min_elem)
+        if (arr[i] < min_elem)                          // если индекс i меньше чем минимальный элемент arr[0] 
         {
-            min_elem = arr[i];
+            min_elem = arr[i];                          // то мы меняем местами индекс i с min_elem
         }
         
     }
-    cout << "Min_elem = " << min_elem << endl;
+    cout << "Min_elem = " << min_elem << endl;           // выводим минимальный элемент в массиве
 
     for (int i = 0; i < n - 1; i++)                      // перебираем инициализированный массив
     {
